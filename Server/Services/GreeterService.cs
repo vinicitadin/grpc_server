@@ -15,17 +15,21 @@ namespace Server.Services
         {
             return Task.FromResult(new HelloReply
             {
-                Message = "Hello " + request.Name
+                Message = "Hello World"
             });
         }
 
         public override Task<TimeReply> GetTime(TimeRequest request, ServerCallContext context)
         {
+            var hour = DateTime.Now.Hour;
+            var minute = DateTime.Now.Minute;
+            var second = DateTime.Now.Second;
+
             TimeReply output = new TimeReply();
 
-            output.Hour = 9;
-            output.Minute = 35;
-            output.Second = 10;
+            output.Hour = hour;
+            output.Minute = minute;
+            output.Second = second;
 
             return Task.FromResult(output);
         }
