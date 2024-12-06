@@ -4,12 +4,10 @@ option csharp_namespace = "Server";
 
 package greet;
 
-message TimeRequest {
+message HelloRequest {
   string name = 1;
 }
 
-message TimeReply {
-  int32 hour = 1;
-  int32 minute = 2;
-  int32 second = 3;
+message HelloReply {
+  string message = 1;
 }
