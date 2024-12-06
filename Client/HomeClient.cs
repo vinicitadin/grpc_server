@@ -18,6 +18,9 @@ namespace Client
         public HomeClient()
         {
             InitializeComponent();
+
+
+
         }
         private async void btnGreet_Click(object sender, EventArgs e)
         {
@@ -26,7 +29,6 @@ namespace Client
 
             var channel = GrpcChannel.ForAddress("https://localhost:7044/");
             var client = new Greeter.GreeterClient(channel);
-
             var reply = await client.SayHelloAsync(input);
 
             MessageBox.Show(reply.Message, "Hello world!");
@@ -38,8 +40,7 @@ namespace Client
             var input = new TimeRequest { Name = name };
 
             var channel = GrpcChannel.ForAddress("https://localhost:7044/");
-            var client = new Time.TimeClient(channel);
-
+            var client = new Greeter.GreeterClient(channel);
             var reply = await client.GetTimeAsync(input);
 
             MessageBox.Show(reply.Hour + ":" + reply.Minute + ":" + reply.Second, "Horário");
