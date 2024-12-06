@@ -1,5 +1,6 @@
 using Grpc.Core;
 using Server;
+using Shared;
 
 namespace Server.Services
 {
