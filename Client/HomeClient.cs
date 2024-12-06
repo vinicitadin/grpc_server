@@ -30,7 +30,7 @@ namespace Client
             var client = new Greeter.GreeterClient(channel);
             var reply = await client.SayHelloAsync(input);
 
-            MessageBox.Show(reply.Message, "Hello world!");
+            MessageBox.Show(reply.Text, "Hello world!");
         }
 
         private async void btnTime_Click(object sender, EventArgs e)

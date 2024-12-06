@@ -48,7 +48,7 @@
             this.btnGreet.Name = "btnGreet";
             this.btnGreet.Size = new System.Drawing.Size(95, 32);
             this.btnGreet.TabIndex = 1;
-            this.btnGreet.Text = "Cumprimentar";
+            this.btnGreet.Text = "Olá mundo";
             this.btnGreet.UseVisualStyleBackColor = true;
             this.btnGreet.Click += new System.EventHandler(this.btnGreet_Click);
             // 

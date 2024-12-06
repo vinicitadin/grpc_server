@@ -15,7 +15,7 @@ namespace Server.Services
         {
             return Task.FromResult(new HelloReply
             {
-                Message = "Hello World"
+                Text = "Hello World"
             });
         }
 
