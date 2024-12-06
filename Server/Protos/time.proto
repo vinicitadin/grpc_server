@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+service Timer {
+	rpc GetTime (TimeRequest) returns (TimeResponse);
+}
+
+message TimeRequest {
+	string name = 1;
+}
+
+message TimeResponse {
+	int32 hour = 1;
+	int32 minute = 2;
+	int32 second = 3;
+}
