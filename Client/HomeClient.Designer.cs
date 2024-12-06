@@ -30,7 +30,7 @@
         {
             this.btnTime = new System.Windows.Forms.Button();
             this.btnGreet = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -51,13 +51,14 @@
             this.btnGreet.TabIndex = 1;
             this.btnGreet.Text = "Cumprimentar";
             this.btnGreet.UseVisualStyleBackColor = true;
+            this.btnGreet.Click += new System.EventHandler(this.btnGreet_Click);
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 20);
-            this.textBox1.TabIndex = 2;
+            this.tbName.Location = new System.Drawing.Point(64, 26);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(109, 20);
+            this.tbName.TabIndex = 2;
             // 
             // label1
             // 
@@ -74,7 +75,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(256, 132);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.btnGreet);
             this.Controls.Add(this.btnTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -94,7 +95,7 @@
 
         private System.Windows.Forms.Button btnTime;
         private System.Windows.Forms.Button btnGreet;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label1;
     }
 }

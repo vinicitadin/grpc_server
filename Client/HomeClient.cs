@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Grpc.Net.Client;
+using Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace Client
         public HomeClient()
         {
             InitializeComponent();
+        }
+        private async void btnGreet_Click(object sender, EventArgs e)
+        {
+            string name = tbName.Text;
+            var input = new HelloRequest { Name = name };
+
+            var channel = GrpcChannel.ForAddress("https://localhost:7044/");
+            var client = new Greeter.GreeterClient(channel);
+
+            var reply = await client.SayHelloAsync(input);
+
+            Console.WriteLine(reply);
         }
     }
 }
