@@ -2,7 +2,7 @@
 
 namespace Server.Services
 {
-    public class TimeService : Timer.TimerBase
+    public class TimeService : Time.TimeBase
     {
 
         private readonly ILogger<TimeService> _logger;

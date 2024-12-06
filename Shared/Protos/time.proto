@@ -2,9 +2,9 @@ syntax = "proto3";
 
 option csharp_namespace = "Server";
 
-package Timer;
+package timer;
 
-service Timer {
+service Time {
 	rpc GetTime (TimeRequest) returns (TimeResponse);
 }
 
