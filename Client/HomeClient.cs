@@ -14,6 +14,7 @@ namespace Client
 {
     public partial class HomeClient : Form
     {
+
         public HomeClient()
         {
             InitializeComponent();
@@ -27,6 +28,19 @@ namespace Client
             var client = new Greeter.GreeterClient(channel);
 
             var reply = await client.SayHelloAsync(input);
+
+            Console.WriteLine(reply);
+        }
+
+        private async void btnTime_Click(object sender, EventArgs e)
+        {
+            string name = tbName.Text;
+            var input = new TimeRequest { Name = name };
+
+            var channel = GrpcChannel.ForAddress("https://localhost:7044/");
+            var client = new Time.TimeClient(channel);
+
+            var reply = await client.GetTimeAsync(input);
 
             Console.WriteLine(reply);
         }

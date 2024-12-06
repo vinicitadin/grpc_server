@@ -42,6 +42,7 @@
             this.btnTime.TabIndex = 0;
             this.btnTime.Text = "Obter hora";
             this.btnTime.UseVisualStyleBackColor = true;
+            this.btnTime.Click += new System.EventHandler(this.btnTime_Click);
             // 
             // btnGreet
             // 
