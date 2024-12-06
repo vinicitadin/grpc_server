@@ -29,7 +29,7 @@ namespace Client
 
             var reply = await client.SayHelloAsync(input);
 
-            Console.WriteLine(reply);
+            MessageBox.Show(reply.Message, "Hello world!");
         }
 
         private async void btnTime_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Client
 
             var reply = await client.GetTimeAsync(input);
 
-            Console.WriteLine(reply);
+            MessageBox.Show(reply.Hour + ":" + reply.Minute + ":" + reply.Second, "Horário");
         }
     }
 }
