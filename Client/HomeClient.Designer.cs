@@ -30,11 +30,13 @@
         {
             this.btnTime = new System.Windows.Forms.Button();
             this.btnGreet = new System.Windows.Forms.Button();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTime
             // 
-            this.btnTime.Location = new System.Drawing.Point(24, 52);
+            this.btnTime.Location = new System.Drawing.Point(27, 72);
             this.btnTime.Name = "btnTime";
             this.btnTime.Size = new System.Drawing.Size(91, 32);
             this.btnTime.TabIndex = 0;
@@ -44,7 +46,7 @@
             // 
             // btnGreet
             // 
-            this.btnGreet.Location = new System.Drawing.Point(133, 52);
+            this.btnGreet.Location = new System.Drawing.Point(133, 72);
             this.btnGreet.Name = "btnGreet";
             this.btnGreet.Size = new System.Drawing.Size(95, 32);
             this.btnGreet.TabIndex = 1;
@@ -52,11 +54,29 @@
             this.btnGreet.UseVisualStyleBackColor = true;
             this.btnGreet.Click += new System.EventHandler(this.btnGreet_Click);
             // 
+            // tbName
+            // 
+            this.tbName.Location = new System.Drawing.Point(27, 33);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(100, 20);
+            this.tbName.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nome:";
+            // 
             // HomeClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(256, 132);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.btnGreet);
             this.Controls.Add(this.btnTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -68,6 +88,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -75,6 +96,8 @@
 
         private System.Windows.Forms.Button btnTime;
         private System.Windows.Forms.Button btnGreet;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label label1;
     }
 }
 

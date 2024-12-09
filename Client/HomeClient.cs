@@ -24,7 +24,7 @@ namespace Client
         }
         private async void btnGreet_Click(object sender, EventArgs e)
         {
-            var input = new HelloRequest { Id = 1 };
+            var input = new HelloRequest { Name = tbName.Text };
 
             var channel = GrpcChannel.ForAddress("https://localhost:7044/");
             var client = new Greeter.GreeterClient(channel);
@@ -35,7 +35,7 @@ namespace Client
 
         private async void btnTime_Click(object sender, EventArgs e)
         {
-            var input = new TimeRequest { Id = 1 };
+            var input = new TimeRequest { Name = tbName.Text };
 
             var channel = GrpcChannel.ForAddress("https://localhost:7044/");
             var client = new Greeter.GreeterClient(channel);
